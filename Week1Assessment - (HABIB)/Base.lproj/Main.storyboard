@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week1Assessment____HABIB_" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,6 +38,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pib-5F-aax">
                                 <rect key="frame" x="76" y="505" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93884775429448419" green="0.98660781503221517" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="ButtonCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxe-wp-cC4"/>
@@ -46,6 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-Dn-NVj">
                                 <rect key="frame" x="139" y="505" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93884775429448419" green="0.98660781503221517" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="buttonMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7o2-EG-YVy"/>
@@ -59,6 +61,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1K-dp-ES4">
                                 <rect key="frame" x="268" y="505" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93884775429448419" green="0.98660781503221517" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="x"/>
                                 <connections>
                                     <action selector="buttonTimes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkl-aH-AAO"/>
@@ -67,30 +70,44 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYr-og-PRL">
                                 <rect key="frame" x="206" y="505" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93884775429448419" green="0.98660781503221517" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="÷"/>
                                 <connections>
                                     <action selector="BUttonDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRe-ey-7MY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-G3-PAZ">
+                                <rect key="frame" x="139" y="389" width="97" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9953535919749692" green="0.98063598091641113" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.36313668569322954" green="0.52105954983633573" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PEB-kV-bNA">
-                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="Yxw-bc-9RK"/>
+                    <navigationItem key="navigationItem" title="HOME" id="PEB-kV-bNA">
+                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="Yxw-bc-9RK">
+                            <connections>
+                                <segue destination="m3B-g8-lis" kind="show" identifier="go" id="DcA-fJ-ZMh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="num1Text" destination="dTS-YO-oKK" id="bPo-a8-Tau"/>
                         <outlet property="num2Text" destination="H0u-Ta-c2r" id="oGu-MQ-bnz"/>
+                        <outlet property="showResult" destination="hf4-G3-PAZ" id="t4I-5I-XRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="140"/>
+            <point key="canvasLocation" x="997.60000000000002" y="139.880059970015"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="x5y-YN-hyJ">
             <objects>
-                <viewController id="m3B-g8-lis" sceneMemberID="viewController">
+                <viewController id="m3B-g8-lis" customClass="secondViewController" customModule="Week1Assessment____HABIB_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Sg-Ba-CUs"/>
                         <viewControllerLayoutGuide type="bottom" id="XWa-fe-0VJ"/>
@@ -98,12 +115,39 @@
                     <view key="view" contentMode="scaleToFill" id="9q2-gQ-nnt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-AL-h1D">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIC-cZ-efJ">
+                                <rect key="frame" x="286" y="92" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9953535919749692" green="0.98063598091641113" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="webButton:" destination="m3B-g8-lis" eventType="touchUpInside" id="BTQ-bm-eAF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-BL-vQ3">
+                                <rect key="frame" x="35" y="92" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webText" destination="qlz-BL-vQ3" id="vG8-QW-Vnu"/>
+                        <outlet property="webView" destination="xcD-AL-h1D" id="paR-EG-vBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFb-A7-II3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749" y="140"/>
+            <point key="canvasLocation" x="1748" y="139.880059970015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eKG-SW-RdK">
